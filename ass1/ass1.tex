@@ -1,4 +1,4 @@
-                                % Created 2020-11-19 Thu 12:59
+                                % Created 2020-11-19 Thu 20:45
                                 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,10 +14,11 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\author{Massimiliano Falzari(s3459101),  Philip Gast (s3149951)}
 \date{\today}
 \title{Assignment 1 Data analytics \& communication}
 \hypersetup{
-  pdfauthor={},
+  pdfauthor={Massimiliano Falzari(s3459101),  Philip Gast (s3149951)},
   pdftitle={Assignment 1 Data analytics \& communication},
   pdfkeywords={},
   pdfsubject={},
@@ -30,26 +31,37 @@
 
 
 \section{Finding the gaps in Bachelor projects}
-\label{sec:org6d1316f}
+\label{sec:orgbfc23ba}
 \subsection{Summary}
-\label{sec:org79b5639}
+\label{sec:org7a2b804}
 \url{http://fse.studenttheses.ub.rug.nl/id/eprint/21026}
-This bachelor project is mainly focused on the performance of some particular reinforcement learning techniques.
-It focuses his attention on the game of soccer for different reasons. It initially talks about what was done in the past
-and which techniques they will gonna use during the experiments.
-Their reference player uses a multilayer perceptron  (MLP) based Q-learning agent. They use this as a reference to understand better whether or not the vision grid player will have a higher performance. They will also study how
-the activation function of the MLP will influence the result.
-They finally perform the experiment with different field and team size. The final result shows how the vision grid
-player perform better than the reference player and it also shows how the various activation functions influence the final
-result.
+This bachelor project is mainly focused on the performance of some
+particular reinforcement learning techniques.
+It focuses his attention on the game of soccer for different
+reasons.  It starts giving a background of what was done in the
+past and then it explains which techniques they are going to use
+and test. They make different player which uses different
+underlying reinforcement learning algorithms. The reference player
+uses a multilayer perceptron(MLP) with a Q-learning
+algorithm. Their main focus was on the type of perception given to
+the agent/player. Therefore they had another player which instead
+of a MLP uses a vision grid to process the perception of the agent.
+Lastly, they also study how the activation function of the MLP
+influence the results.
+Finally, for every combination of field,team size and
+agent they conduct an experiment. The final result shows that the
+vision grid player performed significantly better then the MLP
+player. However, they also noticed that the activation function of
+the MLP can change a lot the performance of the agent.
+
 
 \subsection{Flaws}
-\label{sec:orgda944fa}
+\label{sec:org2bbcf51}
 The first part is quite good, there is no evident flaw in it. They describe all the various techniques accurately.
 Probably the biggest flaw is that in the result section there are no statistical analyses.
 However, apart from the result section, all the other section are clear and flawless.
 \subsection{Improvements}
-\label{sec:org0922caa}
+\label{sec:org0a2362b}
 The possible improvements are :
 \begin{itemize}
 \item Statistical analyses
@@ -59,19 +71,48 @@ The possible improvements are :
   maybe could be useful to see how other techniques behave with the vision grid technique.
 \end{itemize}
 \section{Making sure a planned Bachelor project is replicable and reproducible}
-\label{sec:org151616e}
+\label{sec:orgcd5aca1}
 \subsection{Reproducibility \& Replicability}
-\label{sec:orgcb82f6c}
-Replicability = A study is replicable if we get the same results
-when we repeat the experiment with possibly the same conditions
+\label{sec:org68390e8}
+A potential Bachelor project would be to compare machine learning
+techniques in face recognition. This project will look at different
+machine learning techniques and use these techniques to use a system
+to recognize faces. The accuracy of the machine learning technique in
+recognizing faces will be compared.
 
-Reproducibility =  A study is reproducible if we can repeat it under the same conditions
-in which it was made the first time
+
+
+Reproducibility describes how easy it is to repeat the study exactly
+as it was done before. Replicability describes whether the results of
+the study are the same when it is repeated.
+
+
+In order to make this project reproducible I would have to make sure
+that the sample size to compare the machine learning techniques is
+large enough. I would also have to make sure that I change the context
+in which the faces have to be recognized, so different lighting
+scenery etc. The results for each face recognition task has to be
+recorded and put in the research. The sample that is used in this
+research is static since they are pictures of faces. If these pictures
+are also included in the research it would increase the
+reproducibility of the research.
+
+
+In order to make this project replicable a large amount of pictures of
+faces should be used. The research uses a static sample that can be
+used by anyone who has access to it, enabling this sample for everyone
+improves the replicability of this research. Since this research uses
+machine learning it is important to note at how many samples a certain
+system has seen, this is important for the end result. The person that
+is repeating the study has to know how much input a system has had in
+order to achieve the end result. If this is unknown the research would
+not be replicable.
+
 
 \section{Getting familiar with the tidyverse}
-\label{sec:org4952009}
+\label{sec:org6ded9e4}
 \subsection{Data Manipulation}
-\label{sec:org90a1a8c}
+\label{sec:orgafe486a}
 \begin{itemize}
 \item Transforming the duration of the delay from minutes into hours
 \begin{verbatim}
@@ -106,7 +147,7 @@ in which it was made the first time
 \end{center}
 \end{itemize}
 \subsection{Summarizing data}
-\label{sec:org03e671d}
+\label{sec:org2028fe2}
 \begin{verbatim}
   avg_delay_causes <- group_by(known_causes,cause_group) %>%
   summarize(avg=mean(duration_hours))
@@ -119,11 +160,12 @@ in which it was made the first time
   \includegraphics[width=.9\linewidth]{avg_delay_causes.jpg}
 \end{center}
 
-From this graph we can notice that the longer delays are usually due to "staff" cause, on the other hand
+From this graph we can notice that the longer delays are usually
+due to "staff" or engineering work causes. On the other hand
 shorter delays are usually due to external or rolling stock causes.
 
 \subsection{Spreading and gathering data}
-\label{sec:org3105884}
+\label{sec:orgae6ca5a}
 
 In theory, the code below should gather the 1999 and 2000 columns into 2 new columns:
 year and cases. In the column year the key of these columns will be insert (e.g. 1999 or 2000),
@@ -154,7 +196,7 @@ In the tibble they are store as character instead of numebers and therefore this
 the operation spread fails on the people tibble because there is not a unique combination
 of keys which identify uniquely each row
 \subsection{Separating \& uniting}
-\label{sec:orgad75eff}
+\label{sec:org561b776}
 \begin{itemize}
 \item "extra: If ‘sep’ is a character vector, this controls what
   happens when there are too many pieces. There are three valid

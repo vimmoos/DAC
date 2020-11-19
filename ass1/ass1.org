@@ -1,17 +1,29 @@
 
 #+TITLE: Assignment 1 Data analytics & communication
+#+AUTHOR: Massimiliano Falzari(s3459101),  Philip Gast (s3149951)
 
 * Finding the gaps in Bachelor projects
 ** Summary
    [[http://fse.studenttheses.ub.rug.nl/id/eprint/21026]]
-   This bachelor project is mainly focused on the performance of some particular reinforcement learning techniques.
-   It focuses his attention on the game of soccer for different reasons. It initially talks about what was done in the past
-   and which techniques they will gonna use during the experiments.
-   Their reference player uses a multilayer perceptron  (MLP) based Q-learning agent. They use this as a reference to understand better whether or not the vision grid player will have a higher performance. They will also study how
-   the activation function of the MLP will influence the result.
-   They finally perform the experiment with different field and team size. The final result shows how the vision grid
-   player perform better than the reference player and it also shows how the various activation functions influence the final
-   result.
+   This bachelor project is mainly focused on the performance of some
+   particular reinforcement learning techniques.
+   It focuses his attention on the game of soccer for different
+   reasons.  It starts giving a background of what was done in the
+   past and then it explains which techniques they are going to use
+   and test. They make different player which uses different
+   underlying reinforcement learning algorithms. The reference player
+   uses a multilayer perceptron(MLP) with a Q-learning
+   algorithm. Their main focus was on the type of perception given to
+   the agent/player. Therefore they had another player which instead
+   of a MLP uses a vision grid to process the perception of the agent.
+   Lastly, they also study how the activation function of the MLP
+   influence the results.
+   Finally, for every combination of field,team size and
+   agent they conduct an experiment. The final result shows that the
+   vision grid player performed significantly better then the MLP
+   player. However, they also noticed that the activation function of
+   the MLP can change a lot the performance of the agent.
+
 
 ** Flaws
    The first part is quite good, there is no evident flaw in it. They describe all the various techniques accurately.
@@ -26,11 +38,40 @@
      maybe could be useful to see how other techniques behave with the vision grid technique.
 * Making sure a planned Bachelor project is replicable and reproducible
 ** Reproducibility & Replicability
-   Replicability = A study is replicable if we get the same results
-   when we repeat the experiment with possibly the same conditions
+   A potential Bachelor project would be to compare machine learning
+   techniques in face recognition. This project will look at different
+   machine learning techniques and use these techniques to use a system
+   to recognize faces. The accuracy of the machine learning technique in
+   recognizing faces will be compared.
 
-   Reproducibility =  A study is reproducible if we can repeat it under the same conditions
-   in which it was made the first time
+
+
+   Reproducibility describes how easy it is to repeat the study exactly
+   as it was done before. Replicability describes whether the results of
+   the study are the same when it is repeated.
+
+
+   In order to make this project reproducible I would have to make sure
+   that the sample size to compare the machine learning techniques is
+   large enough. I would also have to make sure that I change the context
+   in which the faces have to be recognized, so different lighting
+   scenery etc. The results for each face recognition task has to be
+   recorded and put in the research. The sample that is used in this
+   research is static since they are pictures of faces. If these pictures
+   are also included in the research it would increase the
+   reproducibility of the research.
+
+
+   In order to make this project replicable a large amount of pictures of
+   faces should be used. The research uses a static sample that can be
+   used by anyone who has access to it, enabling this sample for everyone
+   improves the replicability of this research. Since this research uses
+   machine learning it is important to note at how many samples a certain
+   system has seen, this is important for the end result. The person that
+   is repeating the study has to know how much input a system has had in
+   order to achieve the end result. If this is unknown the research would
+   not be replicable.
+
 
 * Getting familiar with the tidyverse
 ** Data Manipulation
@@ -74,7 +115,8 @@
 
    [[file:avg_delay_causes.jpg]]
 
-   From this graph we can notice that the longer delays are usually due to "staff" cause, on the other hand
+   From this graph we can notice that the longer delays are usually
+   due to "staff" or engineering work causes. On the other hand
    shorter delays are usually due to external or rolling stock causes.
 
 ** Spreading and gathering data
