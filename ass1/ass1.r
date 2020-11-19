@@ -45,35 +45,3 @@ tibble(x =c("a,b,c", "d,e,f,g", "h,i,j")) %>%
 
 tibble(x =c("a,b,c", "d,e", "f,g,i")) %>%
     separate(x,c("one", "two", "three"),fill="left")
-
-
-## res <- tibble (act_r = c( 0.58,
-##                         0.77,
-##                         0.95,
-##                         1.14,
-##            1.33,
-##                         1.51,
-##                         1.70,
-##                         1.88,
-##                         2.07,
-##            2.25),
-##            human =c ( 0.60,
-##                       0.65,
-##                       0.70,
-##                       0.86,
-##                       1.12,
-##                       1.50,
-##                       1.79,
-##                       2.13,
-##                       2.15,
-##                       2.5))
-
-## ggplot(res,aes(x=c(1,2,3,4,5,6,7,8,9,10),fill="dio"))+
-##     geom_point(aes(y=res$human,fill="human"),color='black',fill="human")+
-##     geom_point(aes(y=res$act_r,fill="act-r"),color='red',fill="act-r") +
-##     ylab("execution time") + xlab("number of item")+ labs(fill="who")+
-##     scale_fill_discrete(name = "Dose", labels = c("A", "B"))+
-##     theme(legend.position = "bottom")+
-##     guides(fill = guide_legend()) + theme_classic() + theme(legend.title = element_text("who"))
-
-## ggsave("result-experiment.png")
