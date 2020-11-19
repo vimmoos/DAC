@@ -38,7 +38,7 @@
      #+BEGIN_SRC R
     library(tidyverse)
     library(ggplot2)
-    dat <- read.csv('disruptions-2019-Q3.csv')
+    dat <- read.csv('disruptions-2019-Q4.csv')
     dat.tib <- as_tibble(dat)
 
 
@@ -108,30 +108,22 @@
    the operation spread fails on the people tibble because there is not a unique combination
    of keys which identify uniquely each row
 ** Separating & uniting
+   + "extra: If ‘sep’ is a character vector, this controls what
+     happens when there are too many pieces. There are three valid
+     options:
+     - "warn" (the default): emit a warning and drop extra  values.
+     - "drop": drop any extra values without a warning.
+     - "merge": only splits at most ‘length(into)’ times " (from the R
+       help function)
 
-   "extra: If ‘sep’ is a character vector, this controls what happens
-   when there are too many pieces. There are three valid
-   options:
+   + "fill: If ‘sep’ is a character vector, this controls what
+     happens when there are not enough pieces. There are three valid
+     options:
+     - "warn" (the default): emit a warning and fill from the right
+     - "right": fill with missing values on the right
+     -  "left": fill with missing values on the left " (from the R
+       help function)
 
-   • "warn" (the default): emit a warning and drop extra
-   values.
-
-   • "drop": drop any extra values without a warning.
-
-   • "merge": only splits at most ‘length(into)’
-   times " (from the R help function)
-
-   "fill: If ‘sep’ is a character vector, this controls what happens
-   when there are not enough pieces. There are three valid
-   options:
-
-   • "warn" (the default): emit a warning and fill from the
-   right
-
-   • "right": fill with missing values on the right
-
-   • "left": fill with missing values on the left " (from the
-   R help function)
 
    #+BEGIN_SRC R
     tibble(x =c("a,b,c", "d,e,f,g", "h,i,j")) %>%

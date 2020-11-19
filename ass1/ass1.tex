@@ -1,4 +1,4 @@
-                                % Created 2020-11-19 Thu 12:44
+                                % Created 2020-11-19 Thu 12:59
                                 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -30,9 +30,9 @@
 
 
 \section{Finding the gaps in Bachelor projects}
-\label{sec:orgd273957}
+\label{sec:org6d1316f}
 \subsection{Summary}
-\label{sec:org06f6b2b}
+\label{sec:org79b5639}
 \url{http://fse.studenttheses.ub.rug.nl/id/eprint/21026}
 This bachelor project is mainly focused on the performance of some particular reinforcement learning techniques.
 It focuses his attention on the game of soccer for different reasons. It initially talks about what was done in the past
@@ -44,12 +44,12 @@ player perform better than the reference player and it also shows how the variou
 result.
 
 \subsection{Flaws}
-\label{sec:org684458f}
+\label{sec:orgda944fa}
 The first part is quite good, there is no evident flaw in it. They describe all the various techniques accurately.
 Probably the biggest flaw is that in the result section there are no statistical analyses.
 However, apart from the result section, all the other section are clear and flawless.
 \subsection{Improvements}
-\label{sec:org045ecaf}
+\label{sec:org0922caa}
 The possible improvements are :
 \begin{itemize}
 \item Statistical analyses
@@ -59,9 +59,9 @@ The possible improvements are :
   maybe could be useful to see how other techniques behave with the vision grid technique.
 \end{itemize}
 \section{Making sure a planned Bachelor project is replicable and reproducible}
-\label{sec:org4d9fc5f}
+\label{sec:org151616e}
 \subsection{Reproducibility \& Replicability}
-\label{sec:orgbc966ab}
+\label{sec:orgcb82f6c}
 Replicability = A study is replicable if we get the same results
 when we repeat the experiment with possibly the same conditions
 
@@ -69,15 +69,15 @@ Reproducibility =  A study is reproducible if we can repeat it under the same co
 in which it was made the first time
 
 \section{Getting familiar with the tidyverse}
-\label{sec:org5158441}
+\label{sec:org4952009}
 \subsection{Data Manipulation}
-\label{sec:org4a69a2b}
+\label{sec:org90a1a8c}
 \begin{itemize}
 \item Transforming the duration of the delay from minutes into hours
 \begin{verbatim}
   library(tidyverse)
   library(ggplot2)
-  dat <- read.csv('disruptions-2019-Q3.csv')
+  dat <- read.csv('disruptions-2019-Q4.csv')
   dat.tib <- as_tibble(dat)
 
 
@@ -106,7 +106,7 @@ in which it was made the first time
 \end{center}
 \end{itemize}
 \subsection{Summarizing data}
-\label{sec:orgda4338a}
+\label{sec:org03e671d}
 \begin{verbatim}
   avg_delay_causes <- group_by(known_causes,cause_group) %>%
   summarize(avg=mean(duration_hours))
@@ -123,7 +123,7 @@ From this graph we can notice that the longer delays are usually due to "staff" 
 shorter delays are usually due to external or rolling stock causes.
 
 \subsection{Spreading and gathering data}
-\label{sec:org14dfec6}
+\label{sec:org3105884}
 
 In theory, the code below should gather the 1999 and 2000 columns into 2 new columns:
 year and cases. In the column year the key of these columns will be insert (e.g. 1999 or 2000),
@@ -154,31 +154,29 @@ In the tibble they are store as character instead of numebers and therefore this
 the operation spread fails on the people tibble because there is not a unique combination
 of keys which identify uniquely each row
 \subsection{Separating \& uniting}
-\label{sec:org016a55b}
+\label{sec:orgad75eff}
+\begin{itemize}
+\item "extra: If ‘sep’ is a character vector, this controls what
+  happens when there are too many pieces. There are three valid
+  options:
+  \begin{itemize}
+  \item "warn" (the default): emit a warning and drop extra  values.
+  \item "drop": drop any extra values without a warning.
+  \item "merge": only splits at most ‘length(into)’ times " (from the R
+    help function)
+  \end{itemize}
 
-"extra: If ‘sep’ is a character vector, this controls what happens
-when there are too many pieces. There are three valid
-options:
+\item "fill: If ‘sep’ is a character vector, this controls what
+  happens when there are not enough pieces. There are three valid
+  options:
+  \begin{itemize}
+  \item "warn" (the default): emit a warning and fill from the right
+  \item "right": fill with missing values on the right
+  \item "left": fill with missing values on the left " (from the R
+    help function)
+  \end{itemize}
+\end{itemize}
 
-• "warn" (the default): emit a warning and drop extra
-values.
-
-• "drop": drop any extra values without a warning.
-
-• "merge": only splits at most ‘length(into)’
-times " (from the R help function)
-
-"fill: If ‘sep’ is a character vector, this controls what happens
-when there are not enough pieces. There are three valid
-options:
-
-• "warn" (the default): emit a warning and fill from the
-right
-
-• "right": fill with missing values on the right
-
-• "left": fill with missing values on the left " (from the
-R help function)
 
 \begin{verbatim}
   tibble(x =c("a,b,c", "d,e,f,g", "h,i,j")) %>%

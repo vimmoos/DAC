@@ -1,7 +1,7 @@
 
 library(tidyverse)
 library(ggplot2)
-dat <- read.csv('~/dac/disruptions-2019-Q3.csv')
+dat <- read.csv('disruptions-2019-Q4.csv')
 dat.tib <- as_tibble(dat)
 
 
