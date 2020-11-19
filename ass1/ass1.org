@@ -62,7 +62,7 @@
     ggplot(known_causes,aes(duration_hours))+
       geom_histogram(binwidth = 1)
      #+END_SRC
-     [[file:~/dac/known_causes.jpg]]
+     [[file:known_causes.jpg]]
 ** Summarizing data
    #+BEGIN_SRC R
     avg_delay_causes <- group_by(known_causes,cause_group) %>%
@@ -72,7 +72,7 @@
       geom_bar(stat="identity")
    #+END_SRC
 
-   [[file:~/dac/avg_delay_causes.jpg]]
+   [[file:avg_delay_causes.jpg]]
 
    From this graph we can notice that the longer delays are usually due to "staff" cause, on the other hand
    shorter delays are usually due to external or rolling stock causes.
