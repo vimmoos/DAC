@@ -1,0 +1,70 @@
+                                % Created 2020-12-04 Fri 08:19
+                                % Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Massimiliano Falzari(s3459101),  Philip Gast (s3149951)}
+\date{\today}
+\title{Assignment 3 Data analytics \& communication}
+\hypersetup{
+ pdfauthor={Massimiliano Falzari(s3459101),  Philip Gast (s3149951)},
+ pdftitle={Assignment 3 Data analytics \& communication},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)},
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Improving a figure}
+\label{sec:orgab4dc4f}
+This figure has some potential flaws that can be improved:
+\begin{itemize}
+\item Borders: in this case the borders,  can create some confusion in the
+viewer because usually the tick on the axis are outside the graph.
+To improve it, we can remove the borders and therefore there will
+not be anymore ambiguity.
+\item Background grid: for this kind of graph, it is probably more on
+point to use the complete grid as background instead of only the
+horizontal lines. This will help to get a faster look at the xaxis.
+\item Legend: the legend should be avoid if possible. Therefore instead of
+the legend, we can place the name of the algorithms above the lines
+in the graph.
+\item Naming: If we want to use a legend anyway, then we should at least
+not use the variable names in the legend. Instead, we should use
+something more explict.
+\end{itemize}
+\section{Making a shiny graph}
+\label{sec:org21d6346}
+The idea for this shinyapp, is to give to the user an inspectable
+overview of the causes of delays in all the dutch station,
+To do so, we are usign plotly  because it gives a lot of
+possible way to interact with the graph. Furthermore, it also allow
+to easily download the current graph as an image.
+
+In order to be able to inspect the causes more specificily than the
+general groups , we added a selector which can be used to specify a
+group of causes to focus only on that group.
+Lastly,we added the possibility also to select multiple cities to
+give another potential view on the causes.
+
+\section{Reflection}
+\label{sec:orgc65efec}
+Shiny  adds a lot funcionality and reactivity to the graph
+however, it has some downsites.
+The main point of shiny is reactivity, allowing therefore to  fs
+\end{document}

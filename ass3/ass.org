@@ -1,0 +1,35 @@
+#+TITLE: Assignment 3 Data analytics & communication
+#+AUTHOR: Massimiliano Falzari(s3459101),  Philip Gast (s3149951)
+
+* Improving a figure
+This figure has some potential flaws that can be improved:
++ Borders: in this case the borders,  can create some confusion in the
+  viewer because usually the tick on the axis are outside the graph.
+  To improve it, we can remove the borders and therefore there will
+  not be anymore ambiguity.
++ Background grid: for this kind of graph, it is probably more on
+  point to use the complete grid as background instead of only the
+  horizontal lines. This will help to get a faster look at the xaxis.
++ Legend: the legend should be avoid if possible. Therefore instead of
+  the legend, we can place the name of the algorithms above the lines
+  in the graph.
++ Naming: If we want to use a legend anyway, then we should at least
+  not use the variable names in the legend. Instead, we should use
+  something more explict.
+* Making a shiny graph
+  The idea for this shinyapp, is to give to the user an inspectable
+  overview of the causes of delays in all the dutch station,
+  To do so, we are usign plotly  because it gives a lot of
+  possible way to interact with the graph. Furthermore, it also allow
+  to easily download the current graph as an image.
+
+  In order to be able to inspect the causes more specificily than the
+  general groups , we added a selector which can be used to specify a
+  group of causes to focus only on that group.
+  Lastly,we added the possibility also to select multiple cities to
+  give another potential view on the causes.
+
+* Reflection
+  Shiny  adds a lot funcionality and reactivity to the graph
+  however, it has some downsites.
+  The main point of shiny is reactivity, allowing therefore to  fs

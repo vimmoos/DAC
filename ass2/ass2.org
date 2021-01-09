@@ -1,0 +1,21 @@
+#+TITLE: Assignment 2 Data analytics & communication
+#+AUTHOR: Massimiliano Falzari(s3459101),  Philip Gast (s3149951)
+
+* Logistic regression
+
+* Model assessment
+  + atext..
+  + btext..
+  + ctext..
+
+
+* Model comparison
+  + atext..
+  + btext..
+  + ctext..
+
+* Extending this to algorithms more generally
+  + atext..
+  + btext..
+  + ctext..
+  + dtext..

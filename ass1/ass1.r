@@ -14,7 +14,7 @@ count(hours,cause_group)
 known_causes <- filter(hours,cause_group != "" & cause_group != "unknown" ) %>% filter(duration_hours < 20)
 
 ggplot(known_causes,aes(duration_hours))+
-    geom_histogram(binwidth = 1)
+    geom_histogram(binwidth = 1) + theme(text = element_text(size = 20))
 
 ggsave("known_causes.jpg")
 
@@ -23,7 +23,7 @@ avg_delay_causes <- group_by(known_causes,cause_group) %>%
     summarize(avg=mean(duration_hours))
 
 ggplot(avg_delay_causes,aes(cause_group,avg)) +
-    geom_bar(stat="identity")
+    geom_bar(stat="identity") + theme(axis.text = element_text(size = 8.5))
 
 ggsave("avg_delay_causes.jpg")
 

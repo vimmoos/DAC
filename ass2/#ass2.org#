@@ -1,0 +1,40 @@
+#+TITLE: Assignment 2 Data analytics & communication
+#+AUTHOR: Massimiliano Falzari(s3459101),  Philip Gast (s3149951)
+
+* Logistic regression
+
+* Model assessment
+  + atext..
+  + btext..
+  + ctext..
+
+DevianceResiduals:Min1QMedian3QMax-1.1207-0.5141-0.2848-0.15493.1812Coefficients:EstimateStd.ErrorzvaluePr(>|z|)(Intercept)-3.8330610.254505-15.061<2e-16***RT0.1081330.0864881.2500.211isDots2.4185770.22420210.787<2e-16***isLeft0.5944130.1430724.1553.26e-05***cohFac-1.2379060.154743-8.0001.25e-15***blocknum0.0015050.0038820.3880.698---Signif.codes:0‘***’0.001‘**’0.01‘*’0.05‘.’0.1‘’1(Dispersionparameterforbinomialfamilytakentobe1)Nulldeviance:1692.4on2547degreesoffreedomResidualdeviance:1370.6on2542degreesoffreedomAIC:1382.6NumberofFisherScoringiterations:6Odds_Ratio2.5%97.5%(Intercept)0.021643260.012890380.03503349RT1.114195980.937270801.31748825isDots11.229868397.3619742117.78685639isLeft1.811967331.371557952.40446272cohFac0.289990750.213166580.39125536blocknum1.001505850.993914421.00916537AnalysisofDevianceTableModel:binomial,link:logitResponse:ERTermsaddedsequentially(firsttolast)DfDevianceResid.DfResid.DevPr(>Chi)NULL25471692.4RT188.63425461603.7<2.2e-16***isDots1145.42125451458.3<2.2e-16***isLeft118.48525441439.81.712e-05***cohFac169.10625431370.7<2.2e-16***blocknum10.15025421370.60.6982---Signif.codes:0‘***’0.001‘**’0.01‘*’0.05‘.’0.1‘’1 
+
+Analysis of Deviance Table
+
+Model: binomial, link: logit
+
+Response: ER
+
+Terms added sequentially (first to last)
+
+
+         Df Deviance Resid. Df Resid. Dev  Pr(>Chi)    
+NULL                      2547     1692.4              
+RT        1   88.634      2546     1603.7 < 2.2e-16 ***
+isDots    1  145.421      2545     1458.3 < 2.2e-16 ***
+isLeft    1   18.485      2544     1439.8 1.712e-05 ***
+cohFac    1   69.106      2543     1370.7 < 2.2e-16 ***
+blocknum  1    0.150      2542     1370.6    0.6982    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+* Model comparison
+  + atext..
+  + btext..
+  + ctext..
+
+* Extending this to algorithms more generally
+  + atext..
+  + btext..
+  + ctext..
+  + dtext..

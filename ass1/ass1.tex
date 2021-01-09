@@ -1,4 +1,4 @@
-                                % Created 2020-11-19 Thu 20:45
+                                % Created 2020-11-20 Fri 00:27
                                 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -31,9 +31,9 @@
 
 
 \section{Finding the gaps in Bachelor projects}
-\label{sec:orgbfc23ba}
+\label{sec:org11e7944}
 \subsection{Summary}
-\label{sec:org7a2b804}
+\label{sec:org1050e6c}
 \url{http://fse.studenttheses.ub.rug.nl/id/eprint/21026}
 This bachelor project is mainly focused on the performance of some
 particular reinforcement learning techniques.
@@ -56,12 +56,12 @@ the MLP can change a lot the performance of the agent.
 
 
 \subsection{Flaws}
-\label{sec:org2bbcf51}
+\label{sec:org56bed90}
 The first part is quite good, there is no evident flaw in it. They describe all the various techniques accurately.
 Probably the biggest flaw is that in the result section there are no statistical analyses.
 However, apart from the result section, all the other section are clear and flawless.
 \subsection{Improvements}
-\label{sec:org0a2362b}
+\label{sec:org8654ff3}
 The possible improvements are :
 \begin{itemize}
 \item Statistical analyses
@@ -71,9 +71,9 @@ The possible improvements are :
   maybe could be useful to see how other techniques behave with the vision grid technique.
 \end{itemize}
 \section{Making sure a planned Bachelor project is replicable and reproducible}
-\label{sec:orgcd5aca1}
+\label{sec:orgc2efad9}
 \subsection{Reproducibility \& Replicability}
-\label{sec:org68390e8}
+\label{sec:org4222b8f}
 A potential Bachelor project would be to compare machine learning
 techniques in face recognition. This project will look at different
 machine learning techniques and use these techniques to use a system
@@ -110,9 +110,9 @@ not be replicable.
 
 
 \section{Getting familiar with the tidyverse}
-\label{sec:org6ded9e4}
+\label{sec:orgef73762}
 \subsection{Data Manipulation}
-\label{sec:orgafe486a}
+\label{sec:orgdaa9a80}
 \begin{itemize}
 \item Transforming the duration of the delay from minutes into hours
 \begin{verbatim}
@@ -137,41 +137,42 @@ not be replicable.
   cause_group != "unknown" &
   duration_hours < 20)
 \end{verbatim}
-\item Using the data from c., creating a histogramusing ggplotof the durations of delays that are found inthis sample. Make sure your plot has proper axes, focuses on the relevant part of the data, and is easy to read
+\item Using the data from c., creating an histogram using ggplot of the durations of delays that are found inthis sample. Make sure your plot has proper axes, focuses on the relevant part of the data, and is easy to read
 \begin{verbatim}
   ggplot(known_causes,aes(duration_hours))+
-  geom_histogram(binwidth = 1)
+  geom_histogram(binwidth = 1) + theme(text = element_text(size = 20))
 \end{verbatim}
 \begin{center}
   \includegraphics[width=.9\linewidth]{known_causes.jpg}
 \end{center}
 \end{itemize}
 \subsection{Summarizing data}
-\label{sec:org2028fe2}
+\label{sec:org197e537}
 \begin{verbatim}
   avg_delay_causes <- group_by(known_causes,cause_group) %>%
   summarize(avg=mean(duration_hours))
 
   ggplot(avg_delay_causes,aes(cause_group,avg)) +
-  geom_bar(stat="identity")
+  geom_bar(stat="identity")+ theme(text = element_text(size = 8.5))
 \end{verbatim}
 
 \begin{center}
   \includegraphics[width=.9\linewidth]{avg_delay_causes.jpg}
 \end{center}
 
+
 From this graph we can notice that the longer delays are usually
 due to "staff" or engineering work causes. On the other hand
 shorter delays are usually due to external or rolling stock causes.
 
 \subsection{Spreading and gathering data}
-\label{sec:orgae6ca5a}
+\label{sec:orga0377ff}
 
 In theory, the code below should gather the 1999 and 2000 columns into 2 new columns:
 year and cases. In the column year the key of these columns will be insert (e.g. 1999 or 2000),
 in the other column, cases,the value of associated with the key will be insert (e.g. 745 , 2666\ldots{}).
 The firsts arguments to gather are similar to the select arguments.
-The key argument is the name of the variable which values form the column key
+The key argument is the name of the variable which values, form the column key.
 The value argument is the associated value for that column
 
 \begin{verbatim}
@@ -179,7 +180,7 @@ The value argument is the associated value for that column
   gather(1999,2000,key = "year", value = "cases")
 \end{verbatim}
 It fails simply because there are missing backticks arround the numbers (they are non-syntactic names).
-In the tibble they are store as character instead of numebers and therefore this line will always fails.
+In the tibble they are store as character instead of numbers and therefore this line will always fails.
 \begin{verbatim}
 
   people <- tribble(
@@ -196,7 +197,7 @@ In the tibble they are store as character instead of numebers and therefore this
 the operation spread fails on the people tibble because there is not a unique combination
 of keys which identify uniquely each row
 \subsection{Separating \& uniting}
-\label{sec:org561b776}
+\label{sec:org4d5fa50}
 \begin{itemize}
 \item "extra: If ‘sep’ is a character vector, this controls what
   happens when there are too many pieces. There are three valid

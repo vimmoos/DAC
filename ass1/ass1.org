@@ -98,10 +98,10 @@
 	     cause_group != "unknown" &
 	     duration_hours < 20)
      #+END_SRC
-   + Using the data from c., creating a histogramusing ggplotof the durations of delays that are found inthis sample. Make sure your plot has proper axes, focuses on the relevant part of the data, and is easy to read
+   + Using the data from c., creating an histogram using ggplot of the durations of delays that are found inthis sample. Make sure your plot has proper axes, focuses on the relevant part of the data, and is easy to read
      #+BEGIN_SRC R
     ggplot(known_causes,aes(duration_hours))+
-      geom_histogram(binwidth = 1)
+      geom_histogram(binwidth = 1) + theme(text = element_text(size = 20))
      #+END_SRC
      [[file:known_causes.jpg]]
 ** Summarizing data
@@ -110,10 +110,11 @@
       summarize(avg=mean(duration_hours))
 
     ggplot(avg_delay_causes,aes(cause_group,avg)) +
-      geom_bar(stat="identity")
+      geom_bar(stat="identity")+ theme(text = element_text(size = 8.5))
    #+END_SRC
 
    [[file:avg_delay_causes.jpg]]
+
 
    From this graph we can notice that the longer delays are usually
    due to "staff" or engineering work causes. On the other hand
@@ -125,7 +126,7 @@
    year and cases. In the column year the key of these columns will be insert (e.g. 1999 or 2000),
    in the other column, cases,the value of associated with the key will be insert (e.g. 745 , 2666...).
    The firsts arguments to gather are similar to the select arguments.
-   The key argument is the name of the variable which values form the column key
+   The key argument is the name of the variable which values, form the column key.
    The value argument is the associated value for that column
 
    #+BEGIN_SRC R
@@ -133,7 +134,7 @@
       gather(1999,2000,key = "year", value = "cases")
    #+END_SRC
    It fails simply because there are missing backticks arround the numbers (they are non-syntactic names).
-   In the tibble they are store as character instead of numebers and therefore this line will always fails.
+   In the tibble they are store as character instead of numbers and therefore this line will always fails.
    #+BEGIN_SRC R
 
     people <- tribble(

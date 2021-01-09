@@ -1,0 +1,9 @@
+#+TITLE: Assignment 5 Data analytics & communication
+#+AUTHOR: Massimiliano Falzari(s3459101),  Philip Gast (s3149951)
+* T-test
+** Paired t-test
+** Welch Two sample t-test
+* Non-parametric alternatives
+* One-way ANOVA
+* Two-way ANOVA
+* Repeated-measures ANOVA
